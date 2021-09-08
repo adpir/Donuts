@@ -5,28 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donuts</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="cursor"></div>
-    <nav>
+    <!-- add the image for the navigation bar -->
+    <header>
         <img src="./images/ice.png" alt="donuts" class="logo">
-        <ul class='nav-links'>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Menu</a></li>
-            <li><a href="#">New & Events</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </nav>
-    <section>
-        <!-- <div class="front-cover">  -->
-        <h1 class="heading">A Reason to Be Happy</h1>
 
+        <!-- <section class="logo-box"> add a svg for the logo</section> -->
+        <!-- <img src="images/navbar-2.jpg" alt="Be Well today" class="logo" /> -->
+        <a class="hamburger" href="#navbar" aria-label="Open main menu">
+            <!-- add open menu bar with an image sr-only means screen reader only for accesibilidad  -->
+            <span class="sr-only">Open main menu</span>
+            <img src="images/icons8-menu.svg" alt="Navigation Button." aria-hidden="true" class="open">
+        </a>
+        <!-- add navbar on a list -->
+        <nav id="navbar">
+            <ul class='nav-links'>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#news">New & Events</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <!-- add close menu bar  with an image -->
+            <a class="close" href="#" aria-label="Close main menu">
+                <span class="sr-only">Close main menu</span>
+                <img src="images/icons8-delete.svg" aria-hidden="true" class="delete" />
+            </a>
+        </nav>
+    </header>
+    <section class="home" id=home>
+        <h3 class="heading">A Reason to Be Happy</h3>
+        <button class="button"></button>
 
+        <!-- <div class="parent"> -->
+        <!-- <div class="my-element-to-clip">
+            <!-- </div> -->
+        <!-- <svg width="0" height="0">
+            <defs>
+                <clipPath id="myCurve" clipPathUnits="objectBoundingBox">
+                    <path d="M 0,1
+									L 0,0
+									L 1,0
+									L 1,1
+									C .65 .8, .35 .8, 0 1
+									Z" />
+                </clipPath>
+            </defs>
+        </svg>
+        </div> -->
     </section>
-    <script src="script.js"></script>
+
+
+    <!--- Menu-->
+    <section class="menu-section" id=menu>
+        <h1 class="menu">Menu</h1>
+        <div class="card">
+            <div class="row">
+                <img src="images/ice.png" alt="">
+                <p>delicious icecream</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row">
+                <img src="images/ice.png" alt="">
+                <p>delicious icecream</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row">
+                <img src="images/ice.png" alt="">
+                <p>delicious icecream</p>
+            </div>
+        </div>
+    </section>
+    <!--- About Us-->
+    <!-- <section class="about-section" id=about>
+        <h1 class="about-us">About Us</h1>
+    </section>
+
+ -->
+
+    <!--- News and Events-->
+    <!-- <section class="news-section" id=news>
+        <h1 class="news">News and Events</h1>
+    </section> -->
+
+    <!--- contact-->
+    <!-- <section class="contact-section" id=contact>
+        <h1 class="contact">Contact Us</h1>
+    </section> -->
+
+    <script src='./script.js'></script>
 </body>
 
 </html>

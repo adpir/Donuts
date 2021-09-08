@@ -1,5 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  
+}
+body {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+} */
 * {
   margin: 0;
   padding: 0;
@@ -7,15 +21,94 @@
 }
 
 body {
-  background: lightpink;
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
 }
-h1 {
-  color: white;
+/* .hidden {
+  display: none;
+}  */
+/* screen reader . this will be hidden unless the user is using a screen reader. if they are not using one the user will see a hamberger button 
+for my own reference if the position is relative the 'open main menu and the close main menu is visible but if I change it to absolute it will be hidden */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+/* card section */
+img {
+  width: 35%;
+}
+/* .card {
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(0, 134, 187);
+  display: flex;
+  flex-wrap: row wrap;
+
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 2.5rem;
+  margin: auto;
+} */
+.card {
+  flex: 5;
+  flex-basis: 45%;
+}
+/* acomodo las images en una linea */
+.menu-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  color: rgb(0, 134, 187);
+}
+.row,
+.card {
+  display: inline-flex;
+  background-color: rgb(205, 27, 143);
+  padding: 0;
+  border-radius: 10px 10px 0 0;
+}
+h3 {
+  color: rgb(105, 5, 5);
   font-size: 3rem;
   font-family: 'Bree Serif', serif;
   text-align: center;
-  line-height: 100vh;
+
   justify-content: space-between;
+}
+.menu {
+  color: rgb(189, 35, 255);
+  font-size: 3rem;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  /* line-height: 100vh; */
+  margin-top: 0;
+  justify-content: space-between;
+}
+header {
+  /* margin 2rem da espacio en lado izq and top - change to 0*/
+  margin: 0;
+  /* display: flex da espacio en lado derecho */
+  display: flex;
+  /* flex-flow: row wrap remueve el espacio en lado derecho */
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 134, 187);
 }
 
 .logo {
@@ -26,27 +119,113 @@ h1 {
   margin: 1rem;
   border-radius: 50%;
 }
-nav {
-  display: flex;
-  /* move the list to the left */
-  justify-content: space-between;
-  width: 100%;
-  min-width: 10vh;
-  align-items: center;
-  margin: auto;
-  background: rgb(217, 166, 191);
+/* this section give more width to the hamberger and the close button image
+adding extra info move the icons to the top */
+.hamburger img .close img {
+  width: 36px;
+  height: 36px;
   position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  margin: 1rem;
 }
-.nav-links {
+
+nav {
+  /*
+this nav control the big  closing and open navbar . using padding : move the image and list menu to down a bit. 
+*/
+  padding: 1rem;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  background-color: rgb(205, 27, 143);
   display: flex;
   justify-content: space-between;
-  list-style: none;
+  text-align: center;
+  /* animate slide up/down */
+  transform: translateY(-100%);
+  transition: transform 1s ease;
 }
-/* .nav-links img {
-  flex: 1;
+/* :target is called when its anchor id #navbar is called by clicking on the hamburger which has href="#navbar" => this make the hamburger and close to work. */
+nav:target {
+  transform: translateY(0);
+}
+nav ul {
+  /*
+  move the ul list that is inside of the navbar to the center;
+    */
+  flex-basis: 90%;
+  /*
+  list-style-type: none; remove the bullets
+    */
+  list-style-type: none;
+}
+nav a {
+  /*
+  padding: 1rem; provided some space between the list
+    */
+  display: block;
+  padding: 60px 0px 0 0px;
+  margin: 0 0 4px 2px;
+  /*
+  font-size: 1.5rem; provided a bigger size to the letters
+    */
+  font-size: 2.5rem;
+  /*
+  font-weight: 600; provided a bolder look to the letters
+    */
+  font-weight: 600;
+  /*
+  text-decoration: none; remove the underline to the letters
+    */
+  text-decoration: none;
+  /*
+ color: white; change color to white to the letters
+    */
+  color: rgb(217, 217, 15);
+  /* animate slide up/down */
+}
+
+nav a:hover {
+  /*
+ using hover change the color to pink to the letters
+    */
+  color: #3a036a;
+}
+/* .parent {
+  filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
 } */
-.nav-links li {
-  padding: 1rem;
+/* .home-section,
+.my-element-to-clip {
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  background: linear-gradient(
+      to right bottom,
+      #f3b167,
+      #ec38bc,
+      #7303c0,
+      #ff051e
+    ),
+    url(./images/ice.png);
+  position: relative;
+  clip-path: url(#myCurve);
+} */
+
+.home {
+  background-image: url(./images/pexels.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 span {
   opacity: 0;
@@ -57,4 +236,90 @@ span {
 span.fade {
   opacity: 4;
   transform: translateY(0px);
+}
+/*
+some styling to make some effect to the navbar and to make it tilt a bit in the corner
+*/
+
+/* add media queries to desktop since it was made mobile responsive first - using logo it change the size to the pic when it reach to  min-width: 600px*/
+@media (min-width: 1008px) {
+  nav {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    transform: none;
+    transition: none;
+    background-color: transparent;
+    display: block;
+  }
+  .hamburger,
+  .close {
+    display: none;
+  }
+
+  header {
+    /* display: flex da espacio en lado derecho */
+    display: flex;
+    /* flex-flow: row wrap remueve el espacio en lado derecho */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(248, 157, 225);
+  }
+  nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 90%;
+    min-width: 10vh;
+    align-items: center;
+    margin: auto;
+  }
+  nav {
+    padding: 0;
+    margin: 0;
+  }
+  /* .nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  } */
+  /* this is going to do equal widths  */
+  /* .nav-links,
+  h1 {
+    flex: 1;
+  } */
+  /* .nav-links li {
+    padding: 1rem;
+  } */
+
+  nav a {
+    color: purple;
+    font-size: 1.5rem;
+  }
+  header nav {
+    flex-basis: 60%;
+
+    /* this fix my issue on the space between the letter  */
+  }
+  .heading {
+    color: rgb(192, 43, 43);
+    font-size: 3rem;
+    font-family: 'Bree Serif', serif;
+    text-align: left;
+    padding: 1.5rem;
+    line-height: 100vh;
+    justify-content: space-between;
+  }
+  span {
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(50px);
+    /* display: inline-block; */
+  }
+  span.fade {
+    opacity: 4;
+    transform: translateY(0px);
+  }
 }

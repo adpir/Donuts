@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightpink;
+}
+h1 {
+  color: white;
+  font-size: 3rem;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  line-height: 100vh;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 6rem;
+  height: 6rem;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  border-radius: 50%;
+}
+nav {
+  display: flex;
+  /* move the list to the left */
+  justify-content: space-between;
+  width: 100%;
+  min-width: 10vh;
+  align-items: center;
+  margin: auto;
+  background: rgb(217, 166, 191);
+  position: absolute;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+/* .nav-links img {
+  flex: 1;
+} */
+.nav-links li {
+  padding: 1rem;
+}
+span {
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translateY(50px);
+  /* display: inline-block; */
+}
+span.fade {
+  opacity: 4;
+  transform: translateY(0px);
+}
+/* .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+} */
