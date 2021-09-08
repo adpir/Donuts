@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,15 @@
 body {
   background: lightpink;
 }
+h1 {
+  color: white;
+  font-size: 3rem;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  line-height: 100vh;
+  justify-content: space-between;
+}
+
 .logo {
   width: 6rem;
   height: 6rem;
@@ -37,10 +48,13 @@ nav {
 .nav-links li {
   padding: 1rem;
 }
-h1 {
-  color: white;
-  font-size: 3rem;
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 100vh;
+span {
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translateY(50px);
+  /* display: inline-block; */
+}
+span.fade {
+  opacity: 4;
+  transform: translateY(0px);
 }
