@@ -7,29 +7,57 @@
 *:before,
 *:after {
   box-sizing: inherit;
-  
-}
-body {
-  font-family: 'Roboto Slab', serif;
-  margin: 0;
-  padding: 0;
 } */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
   font-family: 'lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-}
+   line-height: 1.7; 
+} */
 /* .hidden {
   display: none;
 }  */
+
+/*
+Grid card gallery
+*/
+.gallery-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.gallery-menu img {
+  width: 100%;
+  height: 50vh;
+  /* border-radius: 50px; */
+}
+img {
+  padding: 20px;
+}
+figcaption {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+}
 /* screen reader . this will be hidden unless the user is using a screen reader. if they are not using one the user will see a hamberger button 
 for my own reference if the position is relative the 'open main menu and the close main menu is visible but if I change it to absolute it will be hidden */
 .sr-only {
@@ -43,47 +71,9 @@ for my own reference if the position is relative the 'open main menu and the clo
   border: 0;
 }
 /* card section */
-img {
-  width: 35%;
-}
-/* .card {
-  border-radius: 10px 10px 0 0;
-  background-color: rgb(0, 134, 187);
-  display: flex;
-  flex-wrap: row wrap;
 
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  padding: 2.5rem;
-  margin: auto;
-} */
-.card {
-  flex: 5;
-  flex-basis: 45%;
-}
-/* acomodo las images en una linea */
-.menu-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 0;
-}
-.row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 2rem;
-  color: rgb(0, 134, 187);
-}
-.row,
-.card {
-  display: inline-flex;
-  background-color: rgb(205, 27, 143);
-  padding: 0;
-  border-radius: 10px 10px 0 0;
-}
 h3 {
-  color: rgb(105, 5, 5);
+  color: rgb(69, 179, 69);
   font-size: 3rem;
   font-family: 'Bree Serif', serif;
   text-align: center;
@@ -108,7 +98,7 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(0, 134, 187);
+  background-color: rgb(97, 210, 248);
 }
 
 .logo {
@@ -224,8 +214,10 @@ nav a:hover {
   background-size: cover;
   background-position: top;
   position: relative;
-  height: 95vh;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  height: 50vh;
+  clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
+  /* height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
 }
 span {
   opacity: 0;
@@ -304,7 +296,7 @@ some styling to make some effect to the navbar and to make it tilt a bit in the 
     /* this fix my issue on the space between the letter  */
   }
   .heading {
-    color: rgb(192, 43, 43);
+    color: rgb(97, 210, 248);
     font-size: 3rem;
     font-family: 'Bree Serif', serif;
     text-align: left;
