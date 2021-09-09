@@ -327,7 +327,36 @@ span.fade {
     height: 75;
     clip-path: polygon(0 0, 100% 0%, 100% 64%, 0 100%, 0% 50%);
   }
+  h1 {
+    /* text-align: center;
+    justify-content: space-between;
+    color: #ef476f;
 
+    flex-flow: row wrap;
+    font-size: 3rem;
+    letter-spacing: 6px; */
+    text-align: center;
+    justify-content: space-between;
+    color: #47e7ef;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+  .heading-two {
+    text-align: center;
+    justify-content: space-between;
+    color: #ef476f;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    left: 25%;
+    padding: 0 40px 50px 80px;
+    font-style: italic;
+  }
   nav {
     /*
 using padding : move the image and list menu to down a bit. 
@@ -424,6 +453,30 @@ display: flex; move header navbar to the right
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+  }
+  h1 {
+    text-align: center;
+    justify-content: space-between;
+    color: #47e7ef;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    left: 35%;
+  }
+  .heading-two {
+    text-align: center;
+    justify-content: space-between;
+    color: #ef476f;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    left: 35%;
+    padding: 0 40px 50px 80px;
+    font-style: italic;
   }
 
   /*
