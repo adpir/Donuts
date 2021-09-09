@@ -1,63 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* html {
+html {
   box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-} */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  /* outline: none; */
 }
 body {
   font-family: 'Roboto Slab', serif;
   margin: 0;
   padding: 0;
+  background-color: #fadde1;
+  /* line-height: 1.7;
+  color: #777;
+  padding: 20px; */
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+.button {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+  background: #0ac6db;
+  border: 2px solid rgba(197, 4, 168, 0.59);
+  border-radius: 50px;
+  top: 20%;
+  /* 
+  padding: 23px;
+  margin: 20px;
+  border-radius: 50%; */
+}
+a.button {
+  text-decoration: none;
+}
+.about-section,
+.about-us {
+  height: 45vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'box1';
+}
+.about-section {
+  background-color: #ef476f;
+}
 
-/* body {
-  font-family: 'lato', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-   line-height: 1.7; 
+/* .box1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 20px;
 } */
-/* .hidden {
-  display: none;
-}  */
+.box1 {
+  grid-area: box1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  margin: 0 10px 0 10px;
+}
 
 /*
 Grid card gallery
 */
-.gallery-menu {
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-.gallery-menu img {
+.gallery img {
   width: 100%;
-  height: 50vh;
-  /* border-radius: 50px; */
-}
-img {
   padding: 20px;
+  height: 45vh;
 }
+
+/* img {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+} */
+
 figcaption {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(112, 231, 255, 0.668);
+  border: 0;
+  display: block;
+  left: 0;
+  bottom: 0;
+  margin: 10px 0 10px 0;
+  padding: 10px 0 40px 0;
+  border-radius: 30px 10px;
+}
+figure {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-weight: bold;
   font-size: 25px;
+  margin: 1rem;
 }
+h1 {
+  text-align: center;
+  justify-content: space-between;
+  color: #ef476f;
+  position: absolute;
+  display: block;
+  flex-flow: row wrap;
+  font-size: 3rem;
+  letter-spacing: 6px;
+
+  /* top: 50;
+  left: 40%; */
+  /* right: 50; */
+}
+.heading-two {
+  text-align: center;
+  justify-content: space-between;
+  color: #ef476f;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  /* margin: 0;
+  padding: 0; */
+}
+h2 {
+  text-align: center;
+  justify-content: space-between;
+  color: #47e7ef;
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+/* 
+.hidden {
+  display: none;
+} */
 /* screen reader . this will be hidden unless the user is using a screen reader. if they are not using one the user will see a hamberger button 
 for my own reference if the position is relative the 'open main menu and the close main menu is visible but if I change it to absolute it will be hidden */
 .sr-only {
@@ -70,48 +157,34 @@ for my own reference if the position is relative the 'open main menu and the clo
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-/* card section */
-
-h3 {
-  color: rgb(69, 179, 69);
-  font-size: 3rem;
-  font-family: 'Bree Serif', serif;
-  text-align: center;
-
-  justify-content: space-between;
-}
-.menu {
-  color: rgb(189, 35, 255);
-  font-size: 3rem;
-  font-family: 'Bree Serif', serif;
-  text-align: center;
-  /* line-height: 100vh; */
-  margin-top: 0;
-  justify-content: space-between;
-}
 header {
-  /* margin 2rem da espacio en lado izq and top - change to 0*/
   margin: 0;
-  /* display: flex da espacio en lado derecho */
   display: flex;
-  /* flex-flow: row wrap remueve el espacio en lado derecho */
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(97, 210, 248);
+  background-color: #ef476f;
+}
+/* logo width 50% small the image and out it to the left side and move the ul il to the right */
+.logo {
+  width: 100%;
+  opacity: 75%;
+  height: 90vh;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /* add image opacity border-radius: 50%; */
+  background-size: cover;
+  background-position: top;
+  position: relative;
 }
 
-.logo {
-  width: 6rem;
-  height: 6rem;
-  top: 0;
-  right: 0;
-  margin: 1rem;
-  border-radius: 50%;
-}
 /* this section give more width to the hamberger and the close button image
 adding extra info move the icons to the top */
-.hamburger img .close img {
+.hamburger img,
+.close img {
   width: 36px;
   height: 36px;
   position: absolute;
@@ -122,11 +195,16 @@ adding extra info move the icons to the top */
   right: 0;
   margin: 1rem;
 }
+/* .hamburger {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+} */
 
 nav {
-  /*
-this nav control the big  closing and open navbar . using padding : move the image and list menu to down a bit. 
-*/
   padding: 1rem;
   position: absolute;
   z-index: 1000;
@@ -134,8 +212,8 @@ this nav control the big  closing and open navbar . using padding : move the ima
   left: 0;
   width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
-  background-color: rgb(205, 27, 143);
+  overflow: hidden;
+  background-color: #ffcad4;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -143,30 +221,18 @@ this nav control the big  closing and open navbar . using padding : move the ima
   transform: translateY(-100%);
   transition: transform 1s ease;
 }
-/* :target is called when its anchor id #navbar is called by clicking on the hamburger which has href="#navbar" => this make the hamburger and close to work. */
+
 nav:target {
   transform: translateY(0);
 }
 nav ul {
-  /*
-  move the ul list that is inside of the navbar to the center;
-    */
   flex-basis: 90%;
-  /*
-  list-style-type: none; remove the bullets
-    */
   list-style-type: none;
 }
 nav a {
-  /*
-  padding: 1rem; provided some space between the list
-    */
   display: block;
   padding: 60px 0px 0 0px;
   margin: 0 0 4px 2px;
-  /*
-  font-size: 1.5rem; provided a bigger size to the letters
-    */
   font-size: 2.5rem;
   /*
   font-weight: 600; provided a bolder look to the letters
@@ -179,46 +245,17 @@ nav a {
   /*
  color: white; change color to white to the letters
     */
-  color: rgb(217, 217, 15);
+  color: #e63946;
   /* animate slide up/down */
 }
 
 nav a:hover {
-  /*
- using hover change the color to pink to the letters
-    */
-  color: #3a036a;
+  color: #2ec4b6;
 }
-/* .parent {
-  filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.5));
-} */
-/* .home-section,
-.my-element-to-clip {
-  height: 95vh;
-  background-size: cover;
-  background-position: top;
-  background: linear-gradient(
-      to right bottom,
-      #f3b167,
-      #ec38bc,
-      #7303c0,
-      #ff051e
-    ),
-    url(./images/ice.png);
-  position: relative;
-  clip-path: url(#myCurve);
-} */
 
-.home {
-  background-image: url(./images/pexels.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  height: 50vh;
-  clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
-  /* height: 95vh;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
-}
+/*
+some styling to make some effect to the navbar and to make it tilt a bit in the corner
+*/
 span {
   opacity: 0;
   transition: all 0.5s ease;
@@ -229,89 +266,161 @@ span.fade {
   opacity: 4;
   transform: translateY(0px);
 }
-/*
-some styling to make some effect to the navbar and to make it tilt a bit in the corner
-*/
-
+.waves {
+  outline: none;
+}
 /* add media queries to desktop since it was made mobile responsive first - using logo it change the size to the pic when it reach to  min-width: 600px*/
-@media (min-width: 1008px) {
-  nav {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    transform: none;
-    transition: none;
-    background-color: transparent;
-    display: block;
-  }
-  .hamburger,
-  .close {
-    display: none;
+@media (min-width: 600px 1000px) {
+  .logo {
+    /* width: 35%; */
+    width: 100%;
+    opacity: 50%;
+    height: 75;
+    clip-path: polygon(0 0, 100% 0%, 100% 64%, 0 100%, 0% 50%);
   }
 
-  header {
-    /* display: flex da espacio en lado derecho */
+  nav {
+    /*
+using padding : move the image and list menu to down a bit. 
+*/
+    padding: 1rem;
+    /* position: absolute move the content list to left where the image is located, and the right side is showing only the menu hamburger  */
+    position: absolute;
+    /* a higher z-index put navbar above hamburger */
+    z-index: 1000;
+    /* move list a bit top */
+    top: 0;
+    /* move list a bit to the left */
+    left: 0;
+    width: 100%;
+    /* adding the 100vh vh stands for viewport it will make sure to cover the screen to black for the close screen  */
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(57, 139, 79, 0.9);
     display: flex;
-    /* flex-flow: row wrap remueve el espacio en lado derecho */
+    justify-content: space-between;
+    text-align: center;
+    /* animate slide up/down */
+    transform: translateY(-100%);
+    transition: transform 1s ease;
+  }
+  nav:target {
+    transform: translateY(0);
+  }
+
+  /*
+this make the hamburger and the close button to dissapear from the screen 
+    */
+  .hamburger .close {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgb(248, 157, 225);
+    top: 0;
+    right: 0;
+    margin: 1rem;
   }
-  nav ul {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    width: 90%;
-    min-width: 10vh;
-    align-items: center;
-    margin: auto;
-  }
+
+  /*
+this make margin: 2rem 0 0 0; the image move all the way to the left
+    */
+  /* margin: 0; */
+  /*
+text was move to the center and using block it move the list to the left (the content is invisible just bullets is showing 
+    */
+  /* text-align: center;
+    display: block; */
+
   nav {
     padding: 0;
     margin: 0;
   }
-  /* .nav-links {
+  nav ul {
+    /*
+remove the bullets from the list
+    */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
-    list-style: none;
-  } */
-  /* this is going to do equal widths  */
-  /* .nav-links,
-  h1 {
-    flex: 1;
-  } */
-  /* .nav-links li {
-    padding: 1rem;
-  } */
 
-  nav a {
-    color: purple;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    /*
+  font-weight: 600; provided a bolder look to the letters
+    */
+    font-weight: 600;
+    /*
+  text-decoration: none; remove the underline to the letters
+    */
+    text-decoration: none;
+    /*
+ color: white; change color to white to the letters
+    */
+    color: beige;
+    display: block;
+    padding: 60px 0px 0 0px;
+    margin: 0 0 4px 2px;
   }
+}
+@media (min-width: 1008px) {
+  header {
+    /*
+display: flex; move header navbar to the right 
+    */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*
+streght the header navbar a bit larger
+    */
   header nav {
     flex-basis: 60%;
+  }
+  /*
+change the header navbar borders to a circular border
+    */
+  nav ul {
+    border-radius: 2rem;
+  }
+  /*
+Grid card gallery
+*/
+  .gallery {
+    /* height: auto; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  figure,
+  .box-1 {
+    grid-column: 1/4;
+    grid-row: 2/4;
+    /* width: 70%; */
+  }
+  figure,
+  .box-3 {
+    grid-column: 2/3;
+    grid-row: 2/2;
+  }
+  .gallery img {
+    /* ; */
+    width: 100%;
+    height: 85vh;
+  }
 
-    /* this fix my issue on the space between the letter  */
-  }
-  .heading {
-    color: rgb(97, 210, 248);
-    font-size: 3rem;
-    font-family: 'Bree Serif', serif;
-    text-align: left;
-    padding: 1.5rem;
-    line-height: 100vh;
-    justify-content: space-between;
-  }
-  span {
-    opacity: 0;
-    transition: all 0.5s ease;
-    transform: translateY(50px);
-    /* display: inline-block; */
-  }
-  span.fade {
-    opacity: 4;
-    transform: translateY(0px);
-  }
+  /* figure {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+  } */
 }

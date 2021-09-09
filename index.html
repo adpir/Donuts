@@ -11,8 +11,14 @@
 <body>
     <!-- add the image for the navigation bar -->
     <header>
-        <img src="./images/ice.png" alt="donuts" class="logo">
+        <div class="icon-box">
+            <img src="img/logo-white.png" alt="icon" class="icon" />
+        </div>
+        <!-- <img src="./images/ice.png" alt="donuts" class="logo"> -->
 
+        <img src="./images/unsplash2.jpg" alt="" class="logo" />
+        <h1 class="heading">A Reason to Be Happy </h1>
+        <a href="#" class="btn btn-white">Welcome</a>
         <!-- <section class="logo-box"> add a svg for the logo</section> -->
         <!-- <img src="images/navbar-2.jpg" alt="Be Well today" class="logo" /> -->
         <a class="hamburger" href="#navbar" aria-label="Open main menu">
@@ -24,8 +30,8 @@
         <nav id="navbar">
             <ul class='nav-links'>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Our Menu</a></li>
                 <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Our Menu</a></li>
                 <li><a href="#news">New & Events</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -36,14 +42,11 @@
             </a>
         </nav>
     </header>
-    <section class="home" id=home>
-        <h3 class="heading">A Reason to Be Happy</h3>
-        <button class="button"></button>
-
-        <!-- <div class="parent"> -->
-        <!-- <div class="my-element-to-clip">
+    <!-- <section class="home" id=home> -->
+    <!-- <div class="parent"> -->
+    <!-- <div class="my-element-to-clip">
             <!-- </div> -->
-        <!-- <svg width="0" height="0">
+    <!-- <svg width="0" height="0">
             <defs>
                 <clipPath id="myCurve" clipPathUnits="objectBoundingBox">
                     <path d="M 0,1
@@ -56,33 +59,51 @@
             </defs>
         </svg>
         </div> -->
-    </section>
 
 
-    <!--- Menu-->
-    <section class="gallery-menu" id=menu>
-        <h1 class="menu">Menu</h1>
-        <div>
-            <figure></figure> <img src="images/ice.png" alt=""></figure>
-            <figcaption>Delicious Ice </figcaption>
-            <figure> <img src="images/unsplash1.jpg" alt=""></figure>
-            <figcaption>Delicious Ice </figcaption>
-            <figure> <img src="images/unsplash3.jpg" alt=""></figure>
-            <figcaption>Delicious Ice </figcaption>
-            <figure> <img src="images/unsplash4.jpg" alt=""></figure>
-            <figcaption>Delicious Ice </figcaption>
-            <figure> <img src="images/unsplash6.jpg" alt=""></figure>
-            <figcaption>Delicious Ice </figcaption>
-
-        </div>
-
-    </section>
     <!--- About Us-->
-    <!-- <section class="about-section" id=about>
-        <h1 class="about-us">About Us</h1>
+    <section class="about-section" id=about>
+
+        <div class="box1">
+            <h2 class="about-us">Our Story</h2>
+
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cumque consequatur
+                provident earum, deleniti
+                aspernatur necessitatibus, tenetur animi deserunt debitis facilis, dolorem numquam voluptatibus fugiat
+                ea
+                voluptatum suscipit nulla labore!</p>
+        </div>
+    </section>
+    <!--- Menu-->
+    <section class="menu" id=menu>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ef476f" fill-opacity="1"
+                d="M0,96L10.9,85.3C21.8,75,44,53,65,69.3C87.3,85,109,139,131,144C152.7,149,175,107,196,122.7C218.2,139,240,213,262,234.7C283.6,256,305,224,327,202.7C349.1,181,371,171,393,138.7C414.5,107,436,53,458,37.3C480,21,502,43,524,96C545.5,149,567,235,589,266.7C610.9,299,633,277,655,229.3C676.4,181,698,107,720,101.3C741.8,96,764,160,785,165.3C807.3,171,829,117,851,112C872.7,107,895,149,916,165.3C938.2,181,960,171,982,170.7C1003.6,171,1025,181,1047,186.7C1069.1,192,1091,192,1113,208C1134.5,224,1156,256,1178,229.3C1200,203,1222,117,1244,80C1265.5,43,1287,53,1309,74.7C1330.9,96,1353,128,1375,144C1396.4,160,1418,160,1429,160L1440,160L1440,0L1429.1,0C1418.2,0,1396,0,1375,0C1352.7,0,1331,0,1309,0C1287.3,0,1265,0,1244,0C1221.8,0,1200,0,1178,0C1156.4,0,1135,0,1113,0C1090.9,0,1069,0,1047,0C1025.5,0,1004,0,982,0C960,0,938,0,916,0C894.5,0,873,0,851,0C829.1,0,807,0,785,0C763.6,0,742,0,720,0C698.2,0,676,0,655,0C632.7,0,611,0,589,0C567.3,0,545,0,524,0C501.8,0,480,0,458,0C436.4,0,415,0,393,0C370.9,0,349,0,327,0C305.5,0,284,0,262,0C240,0,218,0,196,0C174.5,0,153,0,131,0C109.1,0,87,0,65,0C43.6,0,22,0,11,0L0,0Z">
+            </path>
+        </svg>
+        <h2 class="heading-two">Sweet Dreams</h2>
+        <main class="gallery">
+            <figure class="box-1"> <img src="images/ice.png" alt="">
+                <figcaption> <a href="#"> Delicious Ice </figcaption>
+            </figure>
+            <figure class="box-2"> <img src="images/unsplash1.jpg" alt="">
+                <figcaption>Delicious Ice </figcaption>
+            </figure>
+            <figure class="box-3"> <img src="images/unsplash3.jpg" alt="">
+                <figcaption>Delicious </figcaption>
+            </figure>
+            <figure class="box-4"> <img src="images/unsplash4.jpg" alt="">
+                <figcaption> Ice </figcaption>
+            </figure>
+            <figure class="box-5"> <img src="images/unsplash6.jpg" alt="">
+                <figcaption>Delicious Ice </figcaption>
+            </figure>
+
+        </main>
     </section>
 
- -->
+
+
 
     <!--- News and Events-->
     <!-- <section class="news-section" id=news>
