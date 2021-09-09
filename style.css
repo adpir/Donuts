@@ -6,19 +6,16 @@ html {
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
   /* outline: none; */
 }
 body {
   font-family: 'Roboto Slab', serif;
-  margin: 0;
-  padding: 0;
   background-color: #fadde1;
-  /* line-height: 1.7;
-  color: #777;
-  padding: 20px; */
 }
-.button {
+.btn {
   display: block;
   text-align: center;
   justify-content: center;
@@ -27,13 +24,13 @@ body {
   background: #0ac6db;
   border: 2px solid rgba(197, 4, 168, 0.59);
   border-radius: 50px;
-  top: 20%;
+
   /* 
   padding: 23px;
   margin: 20px;
   border-radius: 50%; */
 }
-a.button {
+a.btn {
   text-decoration: none;
 }
 .about-section,
@@ -48,12 +45,7 @@ a.button {
   background-color: #ef476f;
 }
 
-/* .box1 {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  padding: 20px;
-} */
-.box1 {
+.about-container {
   grid-area: box1;
   display: flex;
   justify-content: space-around;
@@ -61,29 +53,87 @@ a.button {
   padding: 0 10px 0 10px;
   margin: 0 10px 0 10px;
 }
-
-/*
-Grid card gallery
-*/
+.container {
+  /* //change from 60 */
+  width: 100%;
+  margin: 2rem auto;
+  padding-bottom: 1%;
+}
+footer {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  height: 20vh;
+  background-image: url('./images/unsplash2.jpg');
+  background-size: cover;
+  background-color: #ef476f;
+  /* width: 100; */
+}
+.container-footer {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  margin: 3rem auto;
+}
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-.gallery img {
-  width: 100%;
-  padding: 20px;
-  height: 45vh;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  /* grid-gap: 1.5rem; */
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
 }
 
-/* img {
-  padding: 20px;
+.gallery__img {
   width: 100%;
-  height: auto;
-} */
+  height: 100%;
+  object-fit: cover;
+  /* padding: 10px; */
+  /* display: block; */
+}
 
-figcaption {
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item--2 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+.gallery__item--3 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+.gallery__item--5 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+figcaption a {
+  text-align: center;
+  justify-content: center;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  width: 100%;
+  color: #ef476f;
+  font-style: italic;
+  font-weight: 700;
+  position: absolute;
+}
+/* figcaption {
   position: absolute;
   text-align: center;
   width: 100%;
@@ -95,8 +145,8 @@ figcaption {
   margin: 10px 0 10px 0;
   padding: 10px 0 40px 0;
   border-radius: 30px 10px;
-}
-figure {
+} */
+/* figure {
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -104,7 +154,7 @@ figure {
   font-weight: bold;
   font-size: 25px;
   margin: 1rem;
-}
+} */
 h1 {
   text-align: center;
   justify-content: space-between;
@@ -128,8 +178,7 @@ h1 {
   flex-flow: row wrap;
   font-size: 3rem;
   letter-spacing: 4px;
-  /* margin: 0;
-  padding: 0; */
+  padding: 0 40px 20px 80px;
 }
 h2 {
   text-align: center;
@@ -168,7 +217,7 @@ header {
 /* logo width 50% small the image and out it to the left side and move the ul il to the right */
 .logo {
   width: 100%;
-  opacity: 75%;
+  opacity: 85%;
   height: 90vh;
   clip-path: polygon(
     0 0,
@@ -392,28 +441,27 @@ change the header navbar borders to a circular border
   /*
 Grid card gallery
 */
-  .gallery {
-    /* height: auto; */
+  /* .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-  }
-  figure,
+  } */
+  /* figure,
   .box-1 {
     grid-column: 1/4;
     grid-row: 2/4;
-    /* width: 70%; */
-  }
-  figure,
+   
+  } */
+  /* figure,
   .box-3 {
     grid-column: 2/3;
     grid-row: 2/2;
   }
   .gallery img {
-    /* ; */
+    
     width: 100%;
     height: 85vh;
-  }
+  } */
 
   /* figure {
     position: relative;
