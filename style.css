@@ -1,462 +1,257 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
 
 :root {
   /* --dark-pink: #ff4d6d; */
-  --light-blue: #0cdff2;
+  --light-turquose: #0cdff2;
+  --light-blue: #e0fbfc;
   --light-pink: #fadde1;
   --light-purple: #9368b7;
-  --light-yellow: #fff046;
+  --light-yellow: #f3d34a;
   --dark-pink: #f08cad;
-}
-html {
-  box-sizing: border-box;
 }
 * *,
 *:before,
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
+}
+body,
+button,
+input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  /*
+    remueve la linea debajo de las letras
+    */
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 img {
   width: 100%;
 }
-a {
-  text-decoration: none;
-}
-/* body,
-button {
-  font-family: 'Roboto Slab', serif;
-  /* background-color: var(--light-pink); */
-
-body {
-  font-family: 'Roboto Slab', serif;
-  background-color: var(--light-pink);
-}
-
-/*
-font size is going to be bigger
-  */
-/* font-size: 4rem;
-  line-height: 0.9;
-  color: var(--light-blue);
-  justify-content: space-between;
-  display: flex;
-} */
-.header-content {
-  align-items: center;
-  background-color: var(--dark-pink);
-  /* padding: 1rem;
-  margin: 1rem; */
-  background-image: url('./images/unsplash2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* .column-1 {
-  margin-left: 1.5rem;
-} */
-/* .column-2 {
-  margin-left: 1.5rem;
-} */
-
-/* .z-index {
-  position: relative;
-  z-index: -2;
-} */
-.header-content .container {
-  /* grid-template-columns: 2.5fr 3.5fr; */
-  min-height: 50vh;
-  padding-left: 1.3rem;
-}
 .container {
-  text-align: center;
-  width: 500px;
-  height: 200px;
-  padding-top: 200px;
+  position: relative;
+  z-index: 3;
+  max-width: 95rem;
+  /* max-width: 95rem; */
+  padding: 0 2rem;
+  margin: 0 auto;
+  /* margin-right: 400px; */
+  /* padding: 0 0 0 2rem; */
 }
-.btn {
-  display: inline-block;
-  padding: 1rem;
-  background-color: var(--light-blue);
-  color: var(--dark-pink);
-  border-radius: 1rem;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 300;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem;
-}
-a.btn:hover {
-  background-color: var(--light-purple);
-  color: var(--light-yellow);
-}
-.gallery {
+.grid-2 {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 9vw);
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 3.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* we need to add some gap in between the image and the text, now we have 3rem of space in each columns */
+/* .column-1 {
+  margin-right: 3.5rem;
+}
+.column-2 {
+  margin-left: 2rem;
+} */
+.column-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.column-2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.text {
+  font-size: 1.5rem;
+  color: var(--light-blue);
+  text-align: left;
+}
+.image {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  width: 45%;
+}
+
+.big-waves {
+  width: 100%;
+  position: absolute;
+}
+nav .container-logo {
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  align-items: center;
+}
+/*
+puso el logo arriba izq
+*/
+.logo {
+  width: 11%;
+  padding-top: 6.5rem;
+  display: flex;
+  align-items: center;
+}
+/*
+put the link en linea en conbinacion con links a
+*/
+.links ul {
+  display: flex;
+}
+.links a {
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  color: var(--dark-one);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
   transition: 0.3s;
 }
-
-.gallery__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* border-radius: 2rem; */
-  /* padding: 5px; */
-  /* margin: 1.1rem; */
-  /* display: block; */
+.links a.active {
+  background-color: var(--main-color);
+  color: var(--light-one);
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 0.9rem 2.1rem;
+  margin-left: 1rem;
 }
-
-.gallery__item--1 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 6;
+.links a:hover {
+  color: var(--main-color);
 }
-
-.gallery__item--2 {
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 1;
-  grid-row-end: 6;
-}
-.gallery__item--3 {
-  grid-column-start: 6;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 6;
-}
-.gallery__item--4 {
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 5;
-  grid-row-end: 9;
-}
-.gallery__item--5 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 5;
-  grid-row-end: 9;
-}
-.container-gallery {
-  min-height: 80vh;
-}
-
-.about-us {
-  text-align: center;
-  justify-content: space-between;
-  color: var(--light-purple);
-  position: absolute;
-  display: flex;
-  flex-flow: row wrap;
-  font-size: 3rem;
-  letter-spacing: 3px;
-  padding: 2rem;
-  font-family: 'Playball', cursive;
-}
-
-.heading-two {
-  color: var(--light-purple);
-  font-size: 3rem;
-  letter-spacing: 3.5px;
-  padding: 2rem;
-  font-family: 'Playball', cursive;
-  align-items: center;
-}
-.about-section,
-.about-us {
-  height: 45vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 'box1';
-  /* z-index: -1; */
-}
-.about-section {
-  background-color: var(--dark-pink);
-}
-
-.about-container,
-.heading-two {
-  grid-area: box1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* padding: 0 20px 0 10px;
-  margin: 0px 20px 20px 10px; */
-}
-p {
-  text-align: center;
-}
-/* screen reader . this will be hidden unless the user is using a screen reader. if they are not using one the user will see a hamberger button 
-for my own reference if the position is relative the 'open main menu and the close main menu is visible but if I change it to absolute it will be hidden */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-header {
-  position: relative;
-  /* margin 2rem da espacio en lado izq and top - change to 0*/
-  margin: 0;
-  /* display: flex da espacio en lado derecho */
-  display: flex;
-  /* flex-flow: row wrap remueve el espacio en lado derecho */
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--dark-pink);
-  width: 100%;
-  height: 10vh;
-}
-/* logo width 50% small the image and out it to the left side and move the ul il to the right */
-.logo {
-  width: 25%;
-  /* 
-  margin-bottom: 5rem; */
-  /* border-radius: 50%; */
-  position: absolute;
-  left: 35%;
-  top: 0;
-  margin: 0 0;
-  justify-content: space-between;
-  align-items: center;
-}
-.ice,
-.donuts {
-  text-align: center;
-  justify-content: space-between;
-  font-size: 2rem;
-  color: var(--light-blue);
-  display: flex;
-  flex-flow: row wrap;
-  opacity: 0.6;
-  padding: 2rem auto;
-  margin: 1.4rem auto;
-}
-/* .donuts {
-  text-align: center;
-  justify-content: space-between;
-  font-size: 4rem;
-  color: var(--light-purple);
-  display: flex;
-  flex-flow: row wrap;
-  padding: 3rem;
-  margin: 0 20px 30px 70px;
-} */
-/* header,
-path {
-  background-color: var(--dark-pink);
-} */
-/* img {
-  background-size: 36px;
-} */
-/* this section give more width to the hamberger and the close button image */
-.hamburger img,
-.close img {
-  width: 26px;
-  height: 26px;
-  margin: 10px;
-}
-.hamburger {
-  position: absolute;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  top: 0;
-  right: 0;
+.links a.active:hover {
+  color: var(--light-one);
+  background-color: #6b44e0;
 }
 
 nav {
-  /*
-using padding : move the image and list menu to down a bit. 
-*/
-  padding: 2rem;
-  /* position: absolute move the content list to left where the image is located, and the right side is showing only the menu hamburger  */
-  position: absolute;
-  /* a higher z-index put navbar above hamburger */
-  z-index: 1000;
-  /* move list a bit top */
-  top: 0;
-  /* move header a bit to the left */
-  left: 0;
   width: 100%;
-  /* adding the 100vh vh stands for viewport it will make sure to cover the screen to black for the close screen  */
-  height: 100vh;
-  overflow: hidden;
-  background-color: var(--dark-pink);
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  /* animate slide up/down */
-  transform: translateY(-100%);
-  transition: transform 0.2s ease;
+  position: relative;
+  z-index: 50;
 }
-/* :target is called when its anchor id #navbar is called by clicking on the hamburger which has href="#navbar" => this make the hamburger and close to work. */
-nav:target {
-  transform: translateY(0);
+.header-content .container.grid-2 {
+  grid-template-columns: 2.5fr 3.5fr;
+  min-height: calc(100vh - 23rem);
+  padding-left: 7rem;
+  text-align: left;
 }
-nav ul {
-  /*
-  move the ul list that is inside of the navbar to the center;
-    */
-  flex-basis: 90%;
-  /*
-  list-style-type: none; remove the bullets
-    */
-  list-style-type: none;
-  padding: 10rem;
-  line-height: 3;
+.heading-title {
+  font-size: 4rem;
+  line-height: 0.9;
+  color: var(--light-pink);
+  margin: 30px;
 }
-nav a {
-  /*
-  padding: 1rem; provided some space between the list
-    */
-  display: block;
-  padding: 1rem;
-  /*
-  font-size: 1.5rem; provided a bigger size to the letters
-    */
-  font-size: 1.5rem;
-  /*
-  font-weight: 600; provided a bolder look to the letters
-    */
-  font-weight: 600;
-  /*
-  text-decoration: none; remove the underline to the letters
-    */
-  text-decoration: none;
-  /*
- color: white; change color to white to the letters
-    */
-  color: var(--light-blue);
+.header-content .text {
+  margin: 1.5rem 2rem;
 }
-nav a:hover {
-  /*
- using hover change the color to pink to the letters
-    */
-  color: var(--light-purple);
+/* .header-content .image .img-element {
+  max-width: 600px;
+} */
+header {
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-blue);
+  position: absolute;
 }
-/* add media queries to desktop since it was made mobile responsive first - using logo it change the size to the pic when it reach to  min-width: 600px*/
-@media (min-width: 850px) {
-  .logo ul {
-    width: 25%;
-    left: 20rem;
-    top: 0;
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--light-yellow);
+  color: var(--light-one);
+  border-radius: 1rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s;
+  margin: 0 80px;
+  align-items: center;
+}
+@media (max-width: 1280px) {
+  header .big-waves {
+    width: 100%;
+    height: 60vh;
+    /* padding-bottom: 60px; */
+  }
+  nav .container-logo {
+    display: flex;
     justify-content: space-between;
+    height: 7rem;
     align-items: center;
   }
-  nav {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    transform: none;
-    background-color: transparent;
-    display: block;
-  }
   /*
-this make the hamburger and the close button to dissapear from the screen 
-    */
-  .hamburger,
-  .close {
+puso el logo arriba izq
+*/
+  .logo {
+    width: 15%;
+    padding-top: 5.4rem;
+    display: flex;
+    align-items: center;
+  }
+  .text {
+    text-align: left;
+    right: -20px;
+  }
+}
+@media (max-width: 580px) {
+  header .big-waves {
+    width: 100%;
+    height: 50vh;
+    /* padding-bottom: 60px; */
+  }
+  /* .column-1 .heading-title {
+    align-items: center;
+  } */
+
+  .image {
+    position: absolute;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    right: 0;
+    margin-right: 30%;
+    width: 45%;
+    bottom: 150px;
+  }
+  .text {
     display: none;
   }
-  header {
-    /*
-this make margin: 0re 0 0 0; to move all the header pink to the top 
-    */
-    margin: 0rem 0 0 0;
-    /*
-text was move to the center and using block it move the list to the left (the content is invisible just bullets is showing 
-    */
-    text-align: center;
-    display: block;
-  }
-  /* nav {
-    padding: 0;
-    margin: 0;
-  } */
-  nav ul {
-    list-style-type: none;
-    margin: 0 20px 0 20px;
-    padding: 2.5rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
 
-    margin-top: 5.5rem;
-
-    border-radius: 0rem;
+  .links ul {
+    display: none;
   }
-  ul a {
-    margin: 20px;
-    padding: 2rem;
+  .btn {
+    display: none;
   }
-}
-@media (min-width: 1000px) {
-  header {
-    /*
-display: flex; move header navbar to the right 
-    */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  /*
-change the logo size to smaller and bit to the top
-    */
-  /* .logo {
-    width: 15%;
-    left: 45rem;
-    top: 0;
-    justify-content: space-between;
-    align-items: center;
-  } */
   .logo {
-    width: 18%;
-    left: 45%;
+    position: absolute;
     top: 0;
-    margin: 0 0;
-    justify-content: space-between;
-    align-items: center;
+    left: 0;
+    width: 20%;
+    display: none;
   }
-  nav ul {
-    flex-basis: 40%;
-  }
-  /*
-streght the header navbar a bit larger
-    */
-  /* header nav {
-    flex-basis: 60%;
-  } */
-  /*
-change the header navbar borders to a circular border
-    */
-  nav {
-    padding: 0;
-    margin: 0;
-  }
-  ul a {
-    justify-content: space-between;
-    align-items: center;
-    letter-spacing: 2.5px;
-    display: flex;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 1rem;
-    font-weight: 600;
-    margin: 0px 45px 0 40px;
-    left: 40%;
+  .container .heading-title {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: var(--light-blue);
+    top: 0;
+    position: absolute;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-align: center;
   }
 }
